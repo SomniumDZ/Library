@@ -43,7 +43,7 @@ public abstract class ErrorWindow {
     }
 
     //    standard
-    private void throwError(String title, String text) {
+    public void throwError(String title, String text) {
         message.setText(text);
         window.setScene(scene);
         window.setTitle(title);
@@ -51,7 +51,7 @@ public abstract class ErrorWindow {
     }
 
     //    with addictive functionality
-    public void throwError(String title, String text, Button... addictiveFunctionality) {
+    void throwError(String title, String text, Button... addictiveFunctionality) {
         throwError("Not realized");
     }
 

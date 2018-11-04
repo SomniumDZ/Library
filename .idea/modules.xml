@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ErrorWindow/ErrorWindow.iml" filepath="$PROJECT_DIR$/ErrorWindow/ErrorWindow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XMLHandler/XMLHandler.iml" filepath="$PROJECT_DIR$/XMLHandler/XMLHandler.iml" />
     </modules>
   </component>
 </project>
