@@ -16,12 +16,16 @@ public class Element {
 
     }
 
-    public Element(core.Attribute... a) {
+    public Element(Attribute... a) {
         Arrays.stream(a).forEach(attribute -> attributes.put(attribute.getName(), attribute.getValue()));
     }
 
     public HashMap<String, String> getAttributes() {
         return attributes;
+    }
+
+    public String getAttribute(String name){
+        return attributes.get(name);
     }
 
     public ArrayList<Element> getChildElements() {
@@ -36,7 +40,7 @@ public class Element {
         });
         return returned.get();
     }
-    boolean containsAllChildesByName(String... strings){
+    public boolean containsAllChildesByName(String... strings){
         ArrayList<String> names = new ArrayList<>();
         getChildElements().forEach(element -> names.add(element.getName()));
         for (String name : strings) {
@@ -72,5 +76,9 @@ public class Element {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean containsAttribute(String connected) {
+        return attributes.containsKey(connected);
     }
 }
